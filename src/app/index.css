@@ -1,0 +1,30 @@
+:root {
+  --primary-background-color: #f6f5fa;
+  --secondary-backround-color: #fff;
+  --text-color: #000;
+  --accent-color: #8fba3e;
+}
+
+body {
+  background-color: var(--primary-background-color);
+}
+
+.container {
+  width: 100%;
+  max-width: 1600px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    padding: 0 12px;
+  }
+}
