@@ -1,0 +1,1 @@
+export {BriefPage} from './page';
