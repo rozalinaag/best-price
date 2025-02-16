@@ -12,7 +12,7 @@ export function Layout({ children }: LayoutProps) {
     <div className={css.wrapper}>
       <Header />
       <div className={clsx('container', css.page)}>
-        <LeftMenu /> <div>{children}</div>
+        <LeftMenu /> <div className={css.content}>{children}</div>
       </div>
       <Footer />
     </div>

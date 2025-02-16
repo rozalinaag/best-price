@@ -11,3 +11,7 @@
   display: flex;
   gap: 26px;
 }
+
+.content {
+  flex-grow: 1;
+}
