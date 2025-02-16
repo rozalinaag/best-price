@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { Footer, Header } from '../../shared/ui';
+import { Footer, Header, LeftMenu } from '../../shared/ui';
 import clsx from 'clsx';
 import css from './styles.module.css';
 
@@ -11,7 +11,9 @@ export function Layout({ children }: LayoutProps) {
   return (
     <div className={css.wrapper}>
       <Header />
-      <div className={clsx('container', css.page)}>{children}</div>
+      <div className={clsx('container', css.page)}>
+        <LeftMenu /> <div>{children}</div>
+      </div>
       <Footer />
     </div>
   );
