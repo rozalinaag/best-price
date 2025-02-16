@@ -12,6 +12,14 @@ body {
   font-weight: 500;
 }
 
+button {
+  all: unset;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
