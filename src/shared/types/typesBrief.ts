@@ -7,5 +7,5 @@ export type Announcement = {
 export type Income = {
   id: string;
   title: string;
-  value: number;
+  value: string;
 };

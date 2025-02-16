@@ -1,15 +1,79 @@
 {
-  "incomeFromOrders": [],
-  "announcements": [
+  "incomeFromOrders": [
     {
-      "id": "48d02af7-173f-4baf-b518-1df91a37548f",
-      "category": "",
-      "text": "hgfds@gf"
+      "id": "1",
+      "title": "Всего",
+      "value": "56 000 ₽"
     },
     {
-      "id": "7eda1d12-894e-4218-a6bf-86f79e6bda1c",
-      "category": "",
-      "text": "ghj@f"
+      "id": "2",
+      "title": "За последний год",
+      "value": "48 000 ₽"
+    }
+    ,
+    {
+      "id": "3",
+      "title": "За последний месяц",
+      "value": "8 600 ₽"
+    }
+    ,
+    {
+      "id": "4",
+      "title": "За последний год",
+      "value": "48 000 ₽"
+    }
+    ,
+    {
+      "id": "5",
+      "title": "За последнию неделю",
+      "value": "2 000 ₽"
+    }
+  ],
+  "announcements": [
+    {
+      "id": "1",
+      "category": "Активные",
+      "text": "hgfds"
+    },
+    {
+      "id": "2",
+      "category": "Активные",
+      "text": "ghj"
+    },
+    {
+      "id": "3",
+      "category": "Активные",
+      "text": "ghj"
+    },
+    {
+      "id": "4",
+      "category": "Неактивные",
+      "text": "ghj"
+    },
+    {
+      "id": "5",
+      "category": "Неактивные",
+      "text": "ghj"
+    },
+    {
+      "id": "6",
+      "category": "Черновики",
+      "text": "ghj"
+    },
+    {
+      "id": "7",
+      "category": "Черновики",
+      "text": "ghj"
+    },
+    {
+      "id": "8",
+      "category": "Черновики",
+      "text": "ghj"
+    },
+    {
+      "id": "9",
+      "category": "Проданные",
+      "text": "ghj"
     }
   ]
 }

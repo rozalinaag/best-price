@@ -11,7 +11,7 @@ export async function fetchAnnouncements(): Promise<Announcement[]> {
 }
 
 export async function fetchIncomeFromOrders(): Promise<Income[]> {
-  const response = await fetch("http://localhost:3001/income");
+  const response = await fetch("http://localhost:3001/incomeFromOrders");
 
   if (!response.ok) {
     throw new Error("Something is wrong with the server..");
