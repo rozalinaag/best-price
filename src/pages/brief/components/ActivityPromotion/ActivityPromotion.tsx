@@ -1,5 +1,4 @@
-import { CardInfo } from '../../../../shared/ui/CardInfo/CardInfo';
-import css from './styles.module.css';
+import { CardInfo } from '#src/shared/ui/CardInfo/CardInfo.tsx';
 
 export function ActivityPromotion() {
   return <CardInfo info="test">Dd</CardInfo>;

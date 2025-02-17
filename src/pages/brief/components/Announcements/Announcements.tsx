@@ -1,9 +1,10 @@
-import { fetchAnnouncements } from '../../../../shared/api/apiBrief';
-import { useDataFetch } from '../../../../shared/hooks/useDataFetch';
-import { Card } from '../../../../shared/ui/Card/Card';
+import { useDataFetch } from 'src/hooks/useDataFetch';
+import { Card } from '#src/shared/ui/Card/Card.tsx';
+import { Announcement } from '#src/types/index.ts';
 
 export function Announcements() {
-  const [error, announcements, isPending] = useDataFetch(fetchAnnouncements);
+  const [error, announcements, isPending] =
+    useDataFetch<Announcement>('api/announcements');
 
   return (
     <Card>
