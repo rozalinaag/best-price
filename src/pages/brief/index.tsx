@@ -14,10 +14,15 @@ export function BriefPage() {
       <Stats />
 
       <div className={css.content}>
-        <IncomeOrder />
-        <Announcements />
-        <ServiceLevel />
-        <ActivityPromotion />
+        <div className={css.row}>
+          <IncomeOrder />
+          <Announcements />
+        </div>
+
+        <div className={css.row}>
+          <ServiceLevel />
+          <ActivityPromotion />
+        </div>
       </div>
     </main>
   );

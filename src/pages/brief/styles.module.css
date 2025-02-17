@@ -1,14 +1,21 @@
 .content {
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  row-gap: 20px;
-  column-gap: 20px;
-  box-sizing: border-box;
+  margin-top: 16px;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.item {
+  background-color: red;
+  padding: 20px;
+  width: 50%;
 }
 
 @media (max-width: 768px) {
   .content {
-    grid-template-columns: 1fr;
   }
 }

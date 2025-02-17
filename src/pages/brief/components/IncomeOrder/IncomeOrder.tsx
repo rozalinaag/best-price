@@ -1,6 +1,6 @@
-import { fetchIncomeFromOrders } from '../../../../shared/api/apiBrief';
-import { useDataFetch } from '../../../../shared/hooks/useDataFetch';
-import { Card } from '../../../../shared/ui/Card/Card';
+import { fetchIncomeFromOrders } from '#src/shared/api/apiBrief.ts';
+import { useDataFetch } from '#src/shared/hooks/useDataFetch.ts';
+import { Card } from '#src/shared/ui/Card/Card.tsx';
 
 export function IncomeOrder() {
   const [error, incomes, isPending] = useDataFetch(fetchIncomeFromOrders);
