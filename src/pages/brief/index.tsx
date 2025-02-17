@@ -11,7 +11,9 @@ export function BriefPage() {
     <main>
       <Title>Сводка</Title>
 
-      <Stats />
+      <div className={css.stats}>
+        <Stats />
+      </div>
 
       <div className={css.content}>
         <div className={css.row}>

@@ -4,10 +4,10 @@ import clsx from 'clsx';
 
 export function Card({
   children,
-  style,
+  className,
 }: {
   children: ReactNode;
-  style: string;
+  className?: string;
 }) {
-  return <div className={clsx(css.wrapper, style)}>{children}</div>;
+  return <div className={clsx(css.wrapper, className)}>{children}</div>;
 }

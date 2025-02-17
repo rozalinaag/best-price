@@ -2,9 +2,12 @@
   margin-top: 16px;
 }
 
+.stats {
+  display: flex;
+}
+
 .row {
   display: flex;
-  width: 100%;
   gap: 16px;
   margin-bottom: 16px;
 }
