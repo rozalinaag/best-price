@@ -16,7 +16,12 @@ export function Announcements() {
       <div className={css.content}>
         {announcements &&
           announcements.map((item) => (
-            <Line key={item.id} title={item.category} value={item.id} />
+            <Line
+              key={item.id}
+              title={item.category}
+              value={item.id}
+              color={item.color}
+            />
           ))}
       </div>
     </Card>

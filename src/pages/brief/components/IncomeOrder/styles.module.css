@@ -1,3 +1,7 @@
 .content div:last-child {
   border-bottom: none;
 }
+
+.image {
+  margin-top: 10%;
+}

@@ -4,13 +4,26 @@
   padding-top: 14px;
   padding-bottom: 14px;
   border-bottom: 1px solid #ecebf0;
+  cursor: pointer;
 }
 
 .title {
   color: var(--secondary-text-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.circle {
+  height: 8px;
+  width: 8px;
+  border-radius: 3px;
 }
 
 .value {
   color: #2a2c36;
   font-weight: 600;
+  display: flex;
+  gap: 9px;
+  align-items: center;
 }

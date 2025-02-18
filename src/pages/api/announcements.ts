@@ -5,22 +5,26 @@ const announcements: Announcement[] = [
   {
     "id": "1",
     "category": "Активные",
-    "value": 14
+    "value": 14,
+    "color": "#74B200"
   },
   {
     "id": "2",
     "category": "Неактивные",
-    "value": 2
+    "value": 2,
+    "color": "#FF9F31"
   },
   {
     "id": "6",
     "category": "Черновики",
-    "value": 3
+    "value": 3,
+    "color": "#636570"
   },
   {
     "id": "9",
     "category": "Проданные",
-    "value": 0
+    "value": 0,
+    "color": "#898B94"
   }
 ];
 
