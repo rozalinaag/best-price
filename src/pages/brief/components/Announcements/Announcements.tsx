@@ -1,6 +1,6 @@
-import { useDataFetch } from 'src/hooks/useDataFetch';
-import { Card } from '#src/shared/ui/Card/Card.tsx';
-import { Announcement } from '#src/types/index.ts';
+import { useDataFetch } from '../../../../hooks/useDataFetch';
+import { Announcement } from '../../../../types';
+import { Card } from '../../../../ui/Card/Card';
 
 export function Announcements() {
   const [error, announcements, isPending] =

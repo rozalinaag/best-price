@@ -10,7 +10,8 @@
     "paths": {
       "@components/*": [
         "components/*"
-      ]
+      ],
+      "@/*": ["./src/*"]
     },
     "target": "ES2017",
     "lib": [

@@ -1,6 +1,6 @@
-import { useDataFetch } from 'src/hooks/useDataFetch';
-import { Card } from '#src/shared/ui/Card/Card.tsx';
-import { Income } from '#src/types/index.ts';
+import { useDataFetch } from '../../../../hooks/useDataFetch';
+import { Income } from '../../../../types';
+import { Card } from '../../../../ui/Card/Card';
 
 export function IncomeOrder() {
   const [error, incomes, isPending] = useDataFetch<Income>('/api/income');

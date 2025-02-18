@@ -1,5 +1,5 @@
-import { Card } from '#src/shared/ui/Card/Card.tsx';
-import { Button, SecondaryTitle } from '#src/shared/ui/index.ts';
+import { Button, SecondaryTitle } from '../../../../ui';
+import { Card } from '../../../../ui/Card/Card';
 import css from './styles.module.css';
 
 export function Stats() {
