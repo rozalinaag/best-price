@@ -1,50 +1,26 @@
 import type { NextApiRequest, NextApiResponse } from "next";
+import { Announcement } from "../../types";
 
-const announcements = [
+const announcements: Announcement[] = [
   {
     "id": "1",
     "category": "Активные",
-    "text": "hgfds"
+    "value": 14
   },
   {
     "id": "2",
-    "category": "Активные",
-    "text": "ghj"
-  },
-  {
-    "id": "3",
-    "category": "Активные",
-    "text": "ghj"
-  },
-  {
-    "id": "4",
     "category": "Неактивные",
-    "text": "ghj"
-  },
-  {
-    "id": "5",
-    "category": "Неактивные",
-    "text": "ghj"
+    "value": 2
   },
   {
     "id": "6",
     "category": "Черновики",
-    "text": "ghj"
-  },
-  {
-    "id": "7",
-    "category": "Черновики",
-    "text": "ghj"
-  },
-  {
-    "id": "8",
-    "category": "Черновики",
-    "text": "ghj"
+    "value": 3
   },
   {
     "id": "9",
     "category": "Проданные",
-    "text": "ghj"
+    "value": 0
   }
 ];
 

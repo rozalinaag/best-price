@@ -1,6 +1,8 @@
 import { useDataFetch } from '../../../../hooks/useDataFetch';
 import { Income } from '../../../../types';
 import { Card } from '../../../../ui/Card/Card';
+import { Line } from './Line/Line';
+import css from './styles.module.css';
 
 export function IncomeOrder() {
   const [error, incomes, isPending] = useDataFetch<Income>('/api/income');
@@ -9,7 +11,12 @@ export function IncomeOrder() {
     <Card>
       {isPending && <p>Loading...</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
-      {incomes && incomes.map((item) => <div key={item.id}>{item.title}</div>)}
+      <div className={css.content}>
+        {incomes &&
+          incomes.map((item) => (
+            <Line key={item.id} title={item.title} value={item.value} />
+          ))}
+      </div>
     </Card>
   );
 }

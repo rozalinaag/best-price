@@ -1,0 +1,3 @@
+.content div:last-child {
+  border-bottom: none;
+}

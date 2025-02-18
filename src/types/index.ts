@@ -1,7 +1,7 @@
 export type Announcement = {
   id: string;
   category: string;
-  text: string;
+  value: number;
 };
 
 export type Income = {

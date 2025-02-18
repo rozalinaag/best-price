@@ -1,6 +1,8 @@
 import { useDataFetch } from '../../../../hooks/useDataFetch';
 import { Announcement } from '../../../../types';
 import { Card } from '../../../../ui/Card/Card';
+import { Line } from './Line/Line';
+import css from './styles.module.css';
 
 export function Announcements() {
   const [error, announcements, isPending] =
@@ -10,8 +12,13 @@ export function Announcements() {
     <Card>
       {isPending && <p>Loading...</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
-      {announcements &&
-        announcements.map((item) => <div key={item.id}>{item.category}</div>)}
+
+      <div className={css.content}>
+        {announcements &&
+          announcements.map((item) => (
+            <Line key={item.id} title={item.category} value={item.id} />
+          ))}
+      </div>
     </Card>
   );
 }
