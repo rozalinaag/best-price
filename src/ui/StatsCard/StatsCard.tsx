@@ -4,12 +4,12 @@ import clsx from 'clsx';
 type Props = {
   title: string;
   value: number;
-  increase: boolean;
   active: boolean;
+  increase?: boolean;
   percent?: number;
 };
 
-export function StatsCard({ title, value, increase, active, percent }: Props) {
+export function StatsCard({ title, value, active, percent, increase }: Props) {
   return (
     <div className={clsx(css.wrapper, active && css.active)}>
       <div className={css.title}>{title}</div>

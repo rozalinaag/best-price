@@ -1,5 +1,6 @@
-import { Button, SecondaryTitle } from '../../../../ui';
+import { Button, SecondaryTitle, StatsCard } from '../../../../ui';
 import { Card } from '../../../../ui/Card/Card';
+import { titlesStats } from './data';
 import css from './styles.module.css';
 
 export function Stats() {
@@ -10,6 +11,18 @@ export function Stats() {
         <div>
           <Button>Больше статистики</Button>
         </div>
+      </div>
+
+      <div className={css.tabs}>
+        {titlesStats.map((item) => (
+          <StatsCard
+            title={item.title}
+            percent={item.percent}
+            value={item.value}
+            increase={item.increase}
+            active={true}
+          />
+        ))}
       </div>
     </Card>
   );

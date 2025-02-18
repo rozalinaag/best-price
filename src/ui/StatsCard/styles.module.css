@@ -1,0 +1,33 @@
+.wrapper {
+  width: 100%;
+  padding: 16px;
+  background-color: #f6f5fa;
+  border: 1px solid #dcdde5;
+  border-radius: 8px;
+}
+
+.title {
+  color: var(--secondary-text-color);
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.value {
+  color: #2a2c36;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.content {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.increase {
+  color: #74b200;
+}
+
+.decrease {
+  color: #f33939;
+}
