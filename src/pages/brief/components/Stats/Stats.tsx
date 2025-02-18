@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Button, SecondaryTitle, StatsCard } from '../../../../ui';
 import { Card } from '../../../../ui/Card/Card';
 import { titlesStats } from './data';
@@ -20,7 +21,6 @@ export function Stats() {
             percent={item.percent}
             value={item.value}
             increase={item.increase}
-            active={true}
           />
         ))}
       </div>
