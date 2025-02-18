@@ -1,7 +1,7 @@
-import { useState } from 'react';
 import { Button, SecondaryTitle, StatsCard } from '../../../../ui';
 import { Card } from '../../../../ui/Card/Card';
 import { titlesStats } from './data';
+import { Chart } from '../Chart/Chart';
 import css from './styles.module.css';
 
 export function Stats() {
@@ -24,6 +24,8 @@ export function Stats() {
           />
         ))}
       </div>
+
+      <Chart />
     </Card>
   );
 }
