@@ -1,6 +1,6 @@
 // src/layouts/MainLayout.tsx
 import React from 'react';
-import { Footer, Header, LeftMenu } from '../shared/ui';
+import { Footer, Header, LeftMenu } from '../ui';
 import css from './styles.module.css';
 import clsx from 'clsx';
 
