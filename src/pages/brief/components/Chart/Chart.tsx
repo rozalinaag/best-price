@@ -1,17 +1,15 @@
-import { BarChart, Bar, XAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  Tooltip,
+  ResponsiveContainer,
+  TooltipProps,
+} from 'recharts';
 import css from './styles.module.css';
+import { weekStats } from './data';
 
-const data = [
-  { name: '21, сб', value: 40 },
-  { name: '22, вс', value: 60 },
-  { name: '23, пн', value: 80 },
-  { name: '24, вт', value: 70 },
-  { name: '25, ср', value: null },
-  { name: '26, чт', value: 90 },
-  { name: '27, пт', value: 50 },
-];
-
-const CustomTooltip = ({ active, payload }: any) => {
+const CustomTooltip = ({ active, payload }: TooltipProps<number, string>) => {
   if (active && payload && payload.length) {
     return (
       <div
@@ -29,12 +27,19 @@ const CustomTooltip = ({ active, payload }: any) => {
   return null;
 };
 
-export function Chart() {
+export function Chart({ id }: { id: string }) {
+  const data =
+    weekStats.find((item) => item.id === id)?.value || weekStats[0].value;
+
   return (
     <ResponsiveContainer className={css.wrapper} width="100%" height={240}>
       <BarChart data={data}>
         <XAxis dataKey="name" tick={{ fill: '#636570' }} axisLine={false} />
-        <Tooltip content={<CustomTooltip />} />
+        <Tooltip
+          cursor={false}
+          content={<CustomTooltip />}
+          animationDuration={0}
+        />
         <Bar
           background={{ fill: '#F6F5FA' }}
           dataKey="value"

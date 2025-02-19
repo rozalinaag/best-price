@@ -3,26 +3,30 @@ import css from './styles.module.css';
 import increaseArrow from './img/increase.svg';
 import decreaseArrow from './img/decrease.svg';
 import clsx from 'clsx';
-import { useState } from 'react';
 
 type Props = {
+  id: string;
   title: string;
   value: number;
+  active: boolean;
+  handleActive: (id: string) => void;
   increase?: boolean;
   percent?: number;
 };
 
-export function StatsCard({ title, value, percent, increase }: Props) {
-  const [activeTab, setActiveTab] = useState<boolean>(false);
-
-  const handlerActive = () => {
-    setActiveTab((prev) => !prev);
-  };
-
+export function StatsCard({
+  id,
+  title,
+  value,
+  active,
+  handleActive,
+  percent,
+  increase,
+}: Props) {
   return (
     <div
-      onClick={handlerActive}
-      className={clsx(css.wrapper, activeTab && css.active)}
+      onClick={() => handleActive(id)}
+      className={clsx(css.wrapper, active && css.active)}
     >
       <div className={css.title}>{title}</div>
 
