@@ -18,10 +18,12 @@ export function CardInfo({
   return (
     <div className={css.wrapper}>
       <SecondaryTitle>{title}</SecondaryTitle>
-      {children}
+
+      <div className={css.content}>{children}</div>
+
       <div className={css.under}>
         <div className={css.descriptionTitle}>{descriptionTitle}</div>
-        <div>{description}</div>
+        <div className={css.description}>{description}</div>
       </div>
     </div>
   );
