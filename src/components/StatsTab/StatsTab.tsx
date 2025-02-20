@@ -7,32 +7,32 @@ import clsx from 'clsx';
 type Props = {
   title: string;
   value: number;
-  active: boolean;
+  isActive: boolean;
   handleActive: () => void;
-  increase?: boolean;
+  isIncrease?: boolean;
   percent?: number;
 };
 
 export function StatsTab({
   title,
   value,
-  active,
+  isActive,
   handleActive,
   percent,
-  increase,
+  isIncrease,
 }: Props) {
   return (
     <div
       onClick={handleActive}
-      className={clsx(css.wrapper, active && css.active)}
+      className={clsx(css.wrapper, isActive && css.active)}
     >
       <div className={css.title}>{title}</div>
 
       <div className={css.content}>
         <div className={css.value}>{value}</div>
         {percent && (
-          <div className={increase ? css.increase : css.decrease}>
-            {increase ? (
+          <div className={isIncrease ? css.increase : css.decrease}>
+            {isIncrease ? (
               <Image src={increaseArrow} width={8} height={9} alt="inc" />
             ) : (
               <Image src={decreaseArrow} width={8} height={9} alt="dec" />

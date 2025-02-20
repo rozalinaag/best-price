@@ -1,12 +1,19 @@
 import { AppProps } from 'next/app';
 import '@/styles/globals.css';
 import { MainLayout } from '../layouts/MainLayout';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <MainLayout>
-      <Component {...pageProps} />
-    </MainLayout>
+    <>
+      <Head>
+        <title>Best Price</title>
+      </Head>
+
+      <MainLayout>
+        <Component {...pageProps} />
+      </MainLayout>
+    </>
   );
 }
 

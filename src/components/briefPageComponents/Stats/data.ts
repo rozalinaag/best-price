@@ -17,7 +17,7 @@ export const titlesStats: TitleStats[] = [
   {
     id: '2',
     title: "Контакты", 
-    value: 0,
+    value: 2,
     increase: false,
     percent: 100,
   }, 
@@ -29,8 +29,8 @@ export const titlesStats: TitleStats[] = [
   {
     id: '4',
     title: "Заказано товаров", 
-    value: 0,
+    value: 10,
     increase: false,
-    percent: 100,
+    percent: 90,
   }, 
 ]

@@ -24,9 +24,9 @@ export function Stats() {
             title={item.title}
             percent={item.percent}
             value={item.value}
-            increase={item.increase}
+            isIncrease={item.increase}
             handleActive={() => setActiveId(item.id)}
-            active={item.id === activeId}
+            isActive={item.id === activeId}
           />
         ))}
       </div>
