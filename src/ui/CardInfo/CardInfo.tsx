@@ -1,16 +1,28 @@
 import { ReactNode } from 'react';
 import css from './styles.module.css';
+import { SecondaryTitle } from '../SecondaryTitle/SecondaryTitle';
 
 type Props = {
   children: ReactNode;
-  info: string;
+  title: string;
+  descriptionTitle: string;
+  description: string;
 };
 
-export function CardInfo({ children, info }: Props) {
+export function CardInfo({
+  title,
+  children,
+  description,
+  descriptionTitle,
+}: Props) {
   return (
     <div className={css.wrapper}>
-      <div>{info}</div>
+      <SecondaryTitle>{title}</SecondaryTitle>
       {children}
+      <div className={css.under}>
+        <div className={css.descriptionTitle}>{descriptionTitle}</div>
+        <div>{description}</div>
+      </div>
     </div>
   );
 }
