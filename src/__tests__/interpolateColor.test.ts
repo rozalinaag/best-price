@@ -1,4 +1,4 @@
-import { interpolateColor } from "../ui/Slide/interpolateColor";
+import { interpolateColor } from "../components/Slide/interpolateColor";
 
 describe("interpolateColor", () => {
   test("returns startColor at 0%", () => {

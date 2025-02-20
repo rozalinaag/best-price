@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useDataFetch } from '../../../../hooks/useDataFetch';
 import { Income } from '../../../../types';
-import { Card } from '../../../../ui/Card/Card';
+import { Card } from '../../../../components/Card/Card';
 import { Line } from './Line/Line';
 import noData from './img/noData.png';
 import css from './styles.module.css';

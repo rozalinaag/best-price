@@ -1,5 +1,5 @@
-import { InfoSlide, Slide } from '../../../../ui';
-import { CardInfo } from '../../../../ui/CardInfo/CardInfo';
+import { InfoSlide, Slide } from '../../../../components';
+import { CardInfo } from '../../../../components/CardInfo/CardInfo';
 import css from './styles.module.css';
 
 export function ActivityPromotion() {

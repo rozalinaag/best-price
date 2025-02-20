@@ -1,5 +1,5 @@
 import React from 'react';
-import { Footer, Header, LeftMenu } from '../ui';
+import { Footer, Header, LeftMenu } from '../components';
 import css from './styles.module.css';
 import clsx from 'clsx';
 

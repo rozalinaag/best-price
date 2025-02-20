@@ -1,4 +1,4 @@
-import { calculatePercentage } from "../ui/Slide/calculatePercentage";
+import { calculatePercentage } from "../components/Slide/calculatePercentage";
 
 describe("calculatePercentage", () => {
   test("returns 0% when x is equal to min", () => {

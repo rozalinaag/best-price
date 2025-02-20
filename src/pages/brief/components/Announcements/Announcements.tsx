@@ -1,6 +1,6 @@
 import { useDataFetch } from '../../../../hooks/useDataFetch';
 import { Announcement } from '../../../../types';
-import { Card } from '../../../../ui/Card/Card';
+import { Card } from '../../../../components/Card/Card';
 import { Line } from './Line/Line';
 import css from './styles.module.css';
 

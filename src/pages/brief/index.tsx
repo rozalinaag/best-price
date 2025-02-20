@@ -1,4 +1,4 @@
-import { Title } from '../../ui';
+import { Title } from '../../components';
 import { ActivityPromotion } from './components/ActivityPromotion/ActivityPromotion';
 import { Announcements } from './components/Announcements/Announcements';
 import { IncomeOrder } from './components/IncomeOrder/IncomeOrder';
