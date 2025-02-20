@@ -1,6 +1,6 @@
 import { CardInfo } from '../../CardInfo/CardInfo';
 import { InfoSlide } from '../../InfoSlide/InfoSlide';
-import { Slide } from '../../Slide/Slide';
+import { Bar } from '../../Bar/Bar';
 import css from './styles.module.css';
 
 export function ActivityPromotion() {
@@ -28,7 +28,7 @@ export function ActivityPromotion() {
       />
       <div className={css.slides}>
         {level <= 50 ? (
-          <Slide
+          <Bar
             value={level}
             width={'50%'}
             minValue={0}
@@ -37,11 +37,11 @@ export function ActivityPromotion() {
             endColor={gradientColor[1]}
           />
         ) : (
-          <Slide width={'50%'} />
+          <Bar width={'50%'} />
         )}
 
         {level > 50 && level <= 80 ? (
-          <Slide
+          <Bar
             value={level}
             width={'30%'}
             minValue={51}
@@ -50,11 +50,11 @@ export function ActivityPromotion() {
             endColor={gradientColor[1]}
           />
         ) : (
-          <Slide width={'30%'} />
+          <Bar width={'30%'} />
         )}
 
         {level > 80 ? (
-          <Slide
+          <Bar
             value={level}
             width={'20%'}
             minValue={81}
@@ -63,7 +63,7 @@ export function ActivityPromotion() {
             endColor={gradientColor[1]}
           />
         ) : (
-          <Slide width={'20%'} />
+          <Bar width={'20%'} />
         )}
       </div>
     </CardInfo>

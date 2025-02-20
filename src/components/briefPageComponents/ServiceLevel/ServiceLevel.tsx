@@ -1,6 +1,6 @@
 import { CardInfo } from '../../CardInfo/CardInfo';
 import { InfoSlide } from '../../InfoSlide/InfoSlide';
-import { Slide } from '../../Slide/Slide';
+import { Bar } from '../../Bar/Bar';
 import css from './styles.module.css';
 
 export function ServiceLevel() {
@@ -18,7 +18,7 @@ export function ServiceLevel() {
 
       <div className={css.slides}>
         {level <= 35 ? (
-          <Slide
+          <Bar
             value={level}
             width={'35%'}
             minValue={0}
@@ -27,11 +27,11 @@ export function ServiceLevel() {
             endColor={gradientColor[1]}
           />
         ) : (
-          <Slide width={'35%'} />
+          <Bar width={'35%'} />
         )}
 
         {level > 35 ? (
-          <Slide
+          <Bar
             value={level}
             width={'65%'}
             minValue={36}
@@ -40,7 +40,7 @@ export function ServiceLevel() {
             endColor={gradientColor[1]}
           />
         ) : (
-          <Slide width={'65%'} />
+          <Bar width={'65%'} />
         )}
       </div>
     </CardInfo>

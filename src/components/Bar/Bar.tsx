@@ -11,7 +11,7 @@ type Props = {
   endColor?: string;
 };
 
-export function Slide({
+export function Bar({
   width,
   value,
   minValue,
