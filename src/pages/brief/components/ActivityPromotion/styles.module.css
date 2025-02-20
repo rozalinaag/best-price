@@ -1,0 +1,13 @@
+.slides {
+  display: flex;
+  gap: 8px;
+}
+
+.infoBlock {
+  display: flex;
+  gap: 5px;
+}
+
+.infoSecondary {
+  color: #898b94;
+}

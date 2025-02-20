@@ -6,3 +6,4 @@ export { Footer } from './Footer/Footer';
 export { LeftMenu } from './LeftMenu/LeftMenu';
 export { StatsCard } from './StatsCard/StatsCard';
 export { Slide } from './Slide/Slide';
+export { InfoSlide } from './InfoSlide/InfoSlide';
