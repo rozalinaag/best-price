@@ -1,3 +1,4 @@
+import { calculatePercentage } from './calculatePercentage';
 import { interpolateColor } from './interpolateColor';
 import css from './styles.module.css';
 
@@ -9,12 +10,6 @@ type Props = {
   startColor?: string;
   endColor?: string;
 };
-
-function calculatePercentage(x: number, min: number, max: number) {
-  if (x <= min) return 0;
-  if (x > max) return 100;
-  return ((x - min) / (max - min)) * 100;
-}
 
 export function Slide({
   width,
