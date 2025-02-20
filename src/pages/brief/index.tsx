@@ -1,7 +1,3 @@
-import css from './styles.module.css';
-import { Announcement, Income } from '../../types';
-import { useDataFetch } from '../../hooks/useDataFetch';
-import { Title } from '../../components';
 import {
   Announcements,
   IncomeOrder,
@@ -9,6 +5,10 @@ import {
   Stats,
   ServiceLevel,
 } from '../../components/briefPageComponents';
+import css from './styles.module.css';
+import { Announcement, Income } from '../../types';
+import { useDataFetch } from '../../hooks/useDataFetch';
+import { Title } from '../../components';
 
 export default function BriefPage() {
   const [errorIncome, incomeData, isPendingIncome] =

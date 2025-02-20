@@ -5,22 +5,22 @@ const incomeFromOrders: Income[] = [
   {
     id: '1',
     title: 'Всего',
-    value: '56 000 ₽',
+    value: 56000,
   },
   {
     id: '2',
     title: 'За последний год',
-    value: '48 000 ₽',
+    value: 48000,
   },
   {
     id: '3',
     title: 'За последний месяц',
-    value: '8 600 ₽',
+    value: 8600,
   },
   {
     id: '5',
     title: 'За последнию неделю',
-    value: '2 000 ₽',
+    value: 2000,
   },
 ];
 
