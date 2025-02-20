@@ -6,7 +6,12 @@ export function Header() {
   return (
     <div className={css.wrapper}>
       <div className="container">
-        <Image className={css.img} src={contentHeader} alt="header" />
+        <Image
+          className={css.img}
+          src={contentHeader}
+          alt="header"
+          priority={true}
+        />
       </div>
     </div>
   );

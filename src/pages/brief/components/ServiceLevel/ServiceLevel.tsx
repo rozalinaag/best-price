@@ -13,7 +13,7 @@ export function ServiceLevel() {
       description="Спасибо, что следуете правилам, — за это положены преимущества"
       descriptionTitle="У вас высокий уровень"
     >
-      <InfoSlide value={level + '%'} days={days} />
+      <InfoSlide value={`${level} %`} days={days} />
 
       <div className={css.slides}>
         {level <= 35 ? (

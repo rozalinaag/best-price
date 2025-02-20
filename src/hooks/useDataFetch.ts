@@ -1,29 +1,31 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-export function useDataFetch<T>(apiUrl: string){
-  const [data, setData] = useState<T[] | null> (null);
+export function useDataFetch<T>(apiUrl: string) {
+  const [data, setData] = useState<T[] | null>(null);
   const [isPending, setIsPending] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null)
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchData = async() => {
+    const fetchData = async () => {
       setIsPending(true);
-      setError(null)
+      setError(null);
 
-      try{
+      try {
         const result = await fetch(apiUrl);
-        if (!result.ok) throw new Error();
+        if (!result.ok) {
+          throw new Error();
+        } 
         const data: T[] = await result.json();
         setData(data);
       } catch {
-        setError('Failed to fetch data')
-      } finally{
-        setIsPending(false)
+        setError('Failed to fetch data');
+      } finally {
+        setIsPending(false);
       }
-    }
+    };
 
-    fetchData()
-  }, [apiUrl])
+    fetchData();
+  }, [apiUrl]);
 
   return [error, data, isPending] as const;
 }

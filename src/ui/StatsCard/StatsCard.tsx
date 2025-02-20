@@ -5,17 +5,15 @@ import decreaseArrow from './img/decrease.svg';
 import clsx from 'clsx';
 
 type Props = {
-  id: string;
   title: string;
   value: number;
   active: boolean;
-  handleActive: (id: string) => void;
+  handleActive: () => void;
   increase?: boolean;
   percent?: number;
 };
 
 export function StatsCard({
-  id,
   title,
   value,
   active,
@@ -25,7 +23,7 @@ export function StatsCard({
 }: Props) {
   return (
     <div
-      onClick={() => handleActive(id)}
+      onClick={handleActive}
       className={clsx(css.wrapper, active && css.active)}
     >
       <div className={css.title}>{title}</div>

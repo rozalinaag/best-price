@@ -21,12 +21,11 @@ export function Stats() {
         {titlesStats.map((item) => (
           <StatsCard
             key={item.id}
-            id={item.id}
             title={item.title}
             percent={item.percent}
             value={item.value}
             increase={item.increase}
-            handleActive={(id: string) => setActiveId(id)}
+            handleActive={() => setActiveId(item.id)}
             active={item.id === activeId}
           />
         ))}
