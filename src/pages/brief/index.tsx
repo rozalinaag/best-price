@@ -1,12 +1,22 @@
-import { Title } from '../../components';
-import { ActivityPromotion } from './components/ActivityPromotion/ActivityPromotion';
-import { Announcements } from './components/Announcements/Announcements';
-import { IncomeOrder } from './components/IncomeOrder/IncomeOrder';
-import { ServiceLevel } from './components/ServiceLevel/ServiceLevel';
-import { Stats } from './components/Stats/Stats';
 import css from './styles.module.css';
+import { Announcement, Income } from '../../types';
+import { useDataFetch } from '../../hooks/useDataFetch';
+import { Title } from '../../components';
+import {
+  Announcements,
+  IncomeOrder,
+  ActivityPromotion,
+  Stats,
+  ServiceLevel,
+} from '../../components/briefPageComponents';
 
-export function BriefPage() {
+export default function BriefPage() {
+  const [errorIncome, incomeData, isPendingIncome] =
+    useDataFetch<Income>('/api/income');
+
+  const [errorAnnouncements, announcementsData, isPendingAnnouncements] =
+    useDataFetch<Announcement>('api/announcements');
+
   return (
     <main>
       <Title>Сводка</Title>
@@ -17,8 +27,16 @@ export function BriefPage() {
 
       <div className={css.content}>
         <div className={css.row}>
-          <IncomeOrder />
-          <Announcements />
+          <IncomeOrder
+            error={errorIncome}
+            incomeData={incomeData}
+            isPending={isPendingIncome}
+          />
+          <Announcements
+            error={errorAnnouncements}
+            announcementsData={announcementsData}
+            isPending={isPendingAnnouncements}
+          />
         </div>
 
         <div className={css.row}>

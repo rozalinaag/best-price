@@ -1,5 +1,6 @@
-import { InfoSlide, Slide } from '../../../../components';
-import { CardInfo } from '../../../../components/CardInfo/CardInfo';
+import { CardInfo } from '../../CardInfo/CardInfo';
+import { InfoSlide } from '../../InfoSlide/InfoSlide';
+import { Slide } from '../../Slide/Slide';
 import css from './styles.module.css';
 
 export function ActivityPromotion() {

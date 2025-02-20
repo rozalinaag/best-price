@@ -4,11 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 2000",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "server": "json-server --port 3001 db.json",
     "test": "jest --watch"
   },
   "dependencies": {

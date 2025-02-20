@@ -1,24 +1,29 @@
 import Image from 'next/image';
-import { useDataFetch } from '../../../../hooks/useDataFetch';
-import { Income } from '../../../../types';
-import { Card } from '../../../../components/Card/Card';
+import { Income } from '../../../types';
+import { Card } from '../../Card/Card';
 import { Line } from './Line/Line';
 import noData from './img/noData.png';
 import css from './styles.module.css';
 
-export function IncomeOrder() {
-  const [error, incomes, isPending] = useDataFetch<Income>('/api/income');
+type Props = {
+  incomeData: Income[] | null;
+  error: string | null;
+  isPending: boolean;
+};
 
+export function IncomeOrder({ error, incomeData, isPending }: Props) {
   return (
     <Card>
       {isPending && <p>Loading...</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
+
       <div className={css.content}>
-        {incomes &&
-          incomes.map((item) => (
+        {incomeData &&
+          incomeData.map((item) => (
             <Line key={item.id} title={item.title} value={item.value} />
           ))}
-        {incomes?.length === 0 && (
+
+        {incomeData?.length === 0 && (
           <Image className={css.image} src={noData} alt="noData" />
         )}
       </div>

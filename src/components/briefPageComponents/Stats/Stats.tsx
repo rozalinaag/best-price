@@ -1,5 +1,5 @@
-import { Button, SecondaryTitle, StatsCard } from '../../../../components';
-import { Card } from '../../../../components/Card/Card';
+import { Button, SecondaryTitle, StatsTab } from '../..';
+import { Card } from '../../Card/Card';
 import { titlesStats } from './data';
 import { Chart } from '../Chart/Chart';
 import css from './styles.module.css';
@@ -19,7 +19,7 @@ export function Stats() {
 
       <div className={css.tabs}>
         {titlesStats.map((item) => (
-          <StatsCard
+          <StatsTab
             key={item.id}
             title={item.title}
             percent={item.percent}

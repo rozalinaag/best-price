@@ -13,7 +13,7 @@ type Props = {
   percent?: number;
 };
 
-export function StatsCard({
+export function StatsTab({
   title,
   value,
   active,
