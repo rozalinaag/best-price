@@ -13,3 +13,13 @@
   justify-content: space-between;
   align-items: center;
 }
+
+@media (max-width: 1200px) {
+  .wrapper {
+    height: 250px;
+  }
+  .content {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

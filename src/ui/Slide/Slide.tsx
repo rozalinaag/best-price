@@ -24,7 +24,7 @@ export function Slide({
   startColor,
   endColor,
 }: Props) {
-  let newValue = minValue;
+  let newValue = 0;
 
   if (value !== undefined && minValue !== undefined && maxValue !== undefined) {
     newValue = calculatePercentage(value, minValue, maxValue);
@@ -45,7 +45,7 @@ export function Slide({
             : '#dcdde5',
       }}
     >
-      {value !== undefined && startColor && endColor && newValue && (
+      {value !== undefined && startColor && endColor && (
         <div
           className={css.circle}
           style={{

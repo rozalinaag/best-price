@@ -1,11 +1,9 @@
 .wrapper {
-  width: 100%;
+  width: 50%;
   background-color: var(--secondary-backround-color);
   border-radius: 8px;
   padding: 32px;
-}
-
-.info {
+  position: relative;
 }
 
 .content {
@@ -23,4 +21,16 @@
   font-weight: 400;
   font-size: 13px;
   color: var(--secondary-text-color);
+}
+
+.info {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+
+@media (max-width: 650px) {
+  .wrapper {
+    width: 80%;
+  }
 }
