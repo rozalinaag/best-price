@@ -9,3 +9,4 @@ export { Bar } from './Bar/Bar';
 export { InfoSlide } from './InfoSlide/InfoSlide';
 export { CardInfo } from './CardInfo/CardInfo';
 export { Card } from './Card/Card';
+export { Tooltip } from './Tooltip/Tooltip';

@@ -3,6 +3,7 @@ import css from './styles.module.css';
 import { SecondaryTitle } from '../SecondaryTitle/SecondaryTitle';
 import Image from 'next/image';
 import info from './img/info.svg';
+import { Tooltip } from '../Tooltip/Tooltip';
 
 type Props = {
   children: ReactNode;
@@ -28,7 +29,9 @@ export function CardInfo({
         <div className={css.description}>{description}</div>
       </div>
 
-      <Image className={css.info} src={info} alt="info" />
+      <Tooltip className={css.info} text="More information">
+        <Image src={info} alt="info" />
+      </Tooltip>
     </div>
   );
 }
