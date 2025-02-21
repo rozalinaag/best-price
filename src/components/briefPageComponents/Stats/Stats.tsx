@@ -1,9 +1,8 @@
-import { Button, SecondaryTitle, StatsTab } from '../..';
-import { Card } from '../../Card/Card';
 import { titlesStats } from './data';
 import { Chart } from '../Chart/Chart';
 import css from './styles.module.css';
 import { useState } from 'react';
+import { Button, Card, SecondaryTitle, StatsTab } from '../../shared';
 
 export function Stats() {
   const [activeId, setActiveId] = useState(titlesStats[0].id);

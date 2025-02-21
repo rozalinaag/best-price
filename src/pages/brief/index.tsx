@@ -8,7 +8,7 @@ import {
 import css from './styles.module.css';
 import { Announcement, Income } from '../../types';
 import { useDataFetch } from '../../hooks/useDataFetch';
-import { Title } from '../../components';
+import { Title } from '../../components/shared';
 
 export default function BriefPage() {
   const [errorIncome, incomeData, isPendingIncome] =

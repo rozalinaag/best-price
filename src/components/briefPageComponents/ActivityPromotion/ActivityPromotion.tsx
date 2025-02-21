@@ -1,6 +1,4 @@
-import { CardInfo } from '../../CardInfo/CardInfo';
-import { InfoSlide } from '../../InfoSlide/InfoSlide';
-import { Bar } from '../../Bar/Bar';
+import { CardInfo, Bar, InfoSlide } from '../../shared';
 import css from './styles.module.css';
 
 const messages = {

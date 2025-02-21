@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { Income } from '../../../types';
-import { Card } from '../../Card/Card';
 import { Line } from './Line/Line';
 import noData from './img/noData.png';
 import css from './styles.module.css';
+import { Card } from '../../shared';
 
 type Props = {
   incomeData: Income[] | null;

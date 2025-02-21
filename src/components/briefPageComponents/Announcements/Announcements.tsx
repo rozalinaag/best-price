@@ -1,5 +1,5 @@
 import { Announcement } from '../../../types';
-import { Card } from '../../Card/Card';
+import { Card } from '../../shared';
 import { Line } from './Line/Line';
 import css from './styles.module.css';
 

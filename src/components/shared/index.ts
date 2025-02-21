@@ -7,3 +7,5 @@ export { Footer } from './Footer/Footer';
 export { LeftMenu } from './LeftMenu/LeftMenu';
 export { Bar } from './Bar/Bar';
 export { InfoSlide } from './InfoSlide/InfoSlide';
+export { CardInfo } from './CardInfo/CardInfo';
+export { Card } from './Card/Card';
