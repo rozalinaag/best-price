@@ -10,5 +10,6 @@
 
 .img {
   cursor: pointer;
+  height: auto;
   width: 100%;
 }

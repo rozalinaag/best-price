@@ -3,45 +3,53 @@ import { InfoSlide } from '../../InfoSlide/InfoSlide';
 import { Bar } from '../../Bar/Bar';
 import css from './styles.module.css';
 
+const messages = {
+  bad: 'У вас низкий уровень',
+  middle: 'У вас средний уровень',
+  good: 'У вас высокий уровень',
+};
+
 export function ServiceLevel() {
-  const level = 100; /* Можно поменять на другой уровень */
+  const level = 96; /* Можно поменять на другой уровень */
   const days = '30 дней';
-  const gradientColor = ['#BFBF00', '#7DBF00'];
+  let titleLevel;
+
+  if (level <= 35) {
+    titleLevel = messages.bad;
+  } else if (level > 35 && level < 75) {
+    titleLevel = messages.middle;
+  } else {
+    titleLevel = messages.good;
+  }
 
   return (
     <CardInfo
       title="Уровень сервиса"
       description="Спасибо, что следуете правилам, — за это положены преимущества"
-      descriptionTitle="У вас высокий уровень"
+      descriptionTitle={titleLevel}
     >
       <InfoSlide value={`${level} %`} days={days} />
 
       <div className={css.slides}>
-        {level <= 35 ? (
-          <Bar
-            value={level}
-            width={'35%'}
-            minValue={0}
-            maxValue={35}
-            startColor={gradientColor[0]}
-            endColor={gradientColor[1]}
-          />
-        ) : (
-          <Bar width={'35%'} />
-        )}
+        <Bar
+          isDisabled={!(level <= 35)}
+          value={level}
+          width={'35%'}
+          minValue={0}
+          maxValue={35}
+          startColor={'#F33939'}
+          endColor={'#F39039'}
+        />
 
-        {level > 35 ? (
-          <Bar
-            value={level}
-            width={'65%'}
-            minValue={36}
-            maxValue={100}
-            startColor={gradientColor[0]}
-            endColor={gradientColor[1]}
-          />
-        ) : (
-          <Bar width={'65%'} />
-        )}
+        <Bar
+          isDisabled={!(level > 35)}
+          value={level}
+          width={'65%'}
+          minValue={36}
+          maxValue={100}
+          startColor={'#BFBF00'}
+          endColor={'#7DBF00'}
+        />
       </div>
     </CardInfo>
   );

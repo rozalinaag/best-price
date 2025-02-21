@@ -3,6 +3,7 @@ import { interpolateColor } from './interpolateColor';
 import css from './styles.module.css';
 
 type Props = {
+  isDisabled: boolean;
   width?: string;
   value?: number;
   minValue?: number;
@@ -12,6 +13,7 @@ type Props = {
 };
 
 export function Bar({
+  isDisabled,
   width,
   value,
   minValue,
@@ -35,12 +37,12 @@ export function Bar({
       style={{
         width: width,
         background:
-          value !== undefined && startColor && endColor
+          !isDisabled && startColor && endColor
             ? `linear-gradient(to right, ${startColor}, ${endColor})`
             : '#dcdde5',
       }}
     >
-      {value !== undefined && startColor && endColor && (
+      {!isDisabled && startColor && endColor && (
         <div
           className={css.circle}
           style={{
